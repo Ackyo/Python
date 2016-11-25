@@ -50,5 +50,10 @@ time.strftime('%Y-%m-%d %H:%M:%S',x)
     print time.mktime(time.strptime(tt,TIMESTAMP))#变为时间戳
 
 today = datetime.datetime.now()
+# curr_day = datetime.datetime(year_int, month_int, day_int, hour_int)
+curr_day = datetime.datetime(2016, 11, 25, 14)
+
+last_hour = today - datetime.timedelta(hours=1)
 yesterday = today - datetime.timedelta(days=1)
+last_week = today - datetime.timedelta(weeks=1)
 settlementDate = time.strftime('%04d-%02d-%02d' % (yesterday.year, yesterday.month, yesterday.day))
